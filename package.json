@@ -1,0 +1,21 @@
+{
+  "name": "agent-forge",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Holographic 3D design lab for analyzing, exploding and re-engineering rocket thrusters, driven by a Claude-powered design agent.",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "start": "node server/index.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.115.0",
+    "@mediapipe/tasks-vision": "^1.0.1",
+    "three": "^0.185.1"
+  },
+  "devDependencies": {
+    "vite": "^8.2.0"
+  }
+}

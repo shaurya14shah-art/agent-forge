@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>AGENT FORGE — Holographic Propulsion Lab</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ctext y='26' font-size='26'%3E%F0%9F%9B%B8%3C/text%3E%3C/svg%3E" />
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
+  <body>
+    <!-- WebGL layer -->
+    <div id="gl-root"></div>
+    <!-- Full-screen hand skeleton, drawn over the AR camera feed -->
+    <canvas id="hand-overlay"></canvas>
+    <!-- HUD glass volume: panels are transformed in 3D inside this perspective -->
+    <div id="css-root"></div>
+
+    <!-- Boot -->
+    <div id="boot">
+      <div class="boot-inner">
+        <div class="boot-mark">Agent Forge</div>
+        <div class="boot-sub">Propulsion design workbench</div>
+        <div class="boot-bar"><i></i></div>
+      </div>
+    </div>
+
+    <!-- Gesture control deck (webcam hand tracking) -->
+    <div id="hand-deck" class="deck"></div>
+
+    <!-- Fixed screen-space chrome: corner brackets + status rail -->
+    <div id="frame" aria-hidden="true">
+      <div class="rail rail-top">
+        <span class="tag">Agent Forge</span>
+        <span class="meta" id="rail-assembly"></span>
+        <span class="meta" id="rail-mode"></span>
+      </div>
+      <div class="rail rail-bottom">
+        <span id="rail-ai" class="badge offline">Checking…</span>
+        <span class="hint">
+          <span><b>drag</b> orbit</span>
+          <span><b>drag a part</b> pull apart</span>
+          <span><b>X</b> explode</span>
+          <span><b>C</b> section</span>
+          <span><b>space</b> fire</span>
+          <span><b>H</b> hands</span>
+          <span><b>Tab</b> hide panels</span>
+          <span><b>/</b> command</span>
+        </span>
+      </div>
+    </div>
+
+    <!-- The way back out of a hidden interface. Never a trap. -->
+    <div class="focus-exit" id="focus-exit">Tab — restore panels</div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
